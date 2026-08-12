@@ -1,0 +1,120 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+#one{
+    background-color: antiquewhite;
+    padding: 30px;
+    margin: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.one {
+    background-color: blue;
+    text-align: center;
+    width: 300PX;
+    height: 150PX;
+}
+
+.two {
+    background-color: rgb(43, 226, 18);
+    text-align: center;
+    width: 300PX;
+    height: 150PX;
+    padding: 20px;
+}
+
+.three {
+    background-color: rgb(12, 139, 212);
+    text-align: center;
+    width: 300PX;
+    height: 150PX;
+    padding: 20px;
+    border: 2px solid black;
+}
+
+.four {
+    background-color: rgb(236, 12, 180);
+    text-align: center;
+    width: 300PX;
+    height: 150PX;
+    padding: 20px;
+    border: 2px solid black;
+    margin: 30px;
+    
+}
+h3{
+    position: relative;
+    top: 35%;
+}
+
+
+/* this challenge html file */
+
+#box{
+    background-color: antiquewhite;
+    padding: 30px;
+    margin: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+h1{
+    text-align: center;
+    margin: 10px;
+}
+.card{
+    width: 300px;
+    height: 150px;
+
+    padding: 20px;
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-bottom: 20px;
+    padding-right: 20px;
+
+    border: 2px solid black;
+    border-radius: 20px;
+
+    margin: 20px;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    margin-right: 20px;
+
+    text-align: center;
+
+    
+}
+.student{
+    background-color:lightblue;
+}
+
+.employee{
+    background-color: lightgreen;
+
+}
+.product{
+    background-color: lightsalmon;
+
+}
+.movie{
+    background-color: lightslategray;
+
+}
+.company{
+    background-color: lightseagreen;
+
+}
+h2{
+    margin-bottom: 15px;
+}
+p{
+    margin: 8px;
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Form</title>
+</head>
+
+<body>
+    <center>
+    <h2>Feedback Form</h2>
+    </center>
+    <form action="">
+        <label for="Enter Full Name">Enter Full Name:</label>
+        <input type="text" name="Enter Full Name" placeholder="Enter Full Name" required><br /><br />
+        <label for="Enter Youer Email">Enter Youer Email:</label>
+        <input type="email" name="Email" placeholder="Enter personal Email" required><br /><br />
+        <label for="Enter Mobile Number">Enter Mobile Number:</label>
+        <input type="tel" name="Mobile Number" minlength="10" maxlength="10" placeholder="Enter 10-digit Mobile Number"
+            required><br /><br />
+        <label for="rating">How satisfied are you?</label>
+        <input type="radio" name="rating" value="Excellent">
+        <label>Excellent</label>
+        <input type="radio" name="rating" value="Good">
+        <label>Good</label>
+        <input type="radio" name="rating" value="Average">
+        <label></label>Average</label>
+        <input type="radio" name="rating" value="Poor">
+        <label>Poor</label><br /><br />
+        <label>Services Used:</label>
+        <input type="checkbox" name="Services" value="HTML"> Website
+        <input type="checkbox" name="Services" value="CSS"> Mobile App
+        <input type="checkbox" name="Services" value="JavaScript"> Customer Support <br /><br />
+        <label for="Suggestion">Suggestion:</label><br />
+        <textarea name="Suggestion" rows="4" cols="20" placeholder="min 10 charter"></textarea><br /><br />
+
+        <select name="recommend ">
+            <option>--Would you recommend us?--</option>
+            <option>YES</option>
+            <option>NO</option>
+            <option>Maybe</option>
+        </select><br /><br />
+        <input type="submit" value="submit">
+        <input type="reset" value="Clear">
+
+
+    </form>
+
+</body>
+
+</html>

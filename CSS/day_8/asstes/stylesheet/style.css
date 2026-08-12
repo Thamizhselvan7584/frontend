@@ -1,0 +1,126 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Courier New', Courier, monospace;
+    box-sizing: border-box;
+}
+
+.box {
+    background-color: lightseagreen;
+    width: 800px;
+    height: 400px;
+    margin: 10px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    position: relative;
+    left: 250px;
+    top: 40px;
+}
+
+.box>input {
+    width: 200px;
+    height: 100px;
+    background-color: aqua;
+    color: white;
+    border-radius: 30px;
+    transition: .4s;
+}
+
+.box>input:hover {
+    background-color: white;
+    color: black;
+    transform: scale(1.1);
+}
+
+
+/* task-2 */
+
+
+
+.container {
+    width: 350px;
+    margin: 50px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px gray;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 2px solid gray;
+    border-radius: 5px;
+    outline: none;
+}
+
+input:focus {
+    border-color: blue;
+    background-color: #e6f7ff;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background: blue;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: darkblue;
+}
+
+
+
+/* task-5 */
+
+.one{
+      margin: 100px;
+}
+h2 {
+    text-align: center;
+}
+
+p {
+    background-color: white;
+    padding: 15px;
+    margin: 20px 0;
+    border: 1px solid #ccc;
+    line-height: 1.6;
+}
+
+p::first-letter {
+    font-size: 35px;
+    font-weight: bold;
+    color: red;
+}
+
+p::first-line {
+    color: blue;
+    font-weight: bold;
+}
+
+p::selection {
+    background-color: rgb(37, 21, 175);
+    color: red;
+}

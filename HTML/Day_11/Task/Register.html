@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial;
+        }
+
+        body {
+            background: #00f2fe;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        #container {
+            width: 500px;
+            background: #fff;
+            padding: 40px;
+            border-radius: 50px;
+        }
+
+        Label {
+            font-weight: bold;
+            color: #1f1e1e;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            border: 2px solid #ccc;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            font-size: 14px;
+        }
+        #gender input {
+            width: auto;
+            margin-right: 5px;
+        }
+       
+    </style>
+</head>
+
+<body>
+    <section id="container">
+        <div>
+            <h1>Registration Form</h1>
+        </div>
+<br><br>
+        <div>
+            <form action="indx.html" method="post" >
+                <table>
+                    <tr>
+                        <td><Label>Enter Name</Label></td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" name="username" placeholder="Start in captila letter" required></td>
+                    </tr>
+                    <tr>
+                        <td><Label>Enter Email</Label></td>
+                    </tr>
+                    <tr>
+
+                        <td><input type="email" name="username" placeholder="personel Email" required></td>
+
+                    </tr>
+                    <tr>
+                        <td><Label>Enter Moblie Number</Label></td>
+                    </tr>
+                    <tr>
+                        <td><input type="tel" minlength="10" maxlength="10" name="username" placeholder="10 digit only" required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><Label>Enter Age</Label></td>
+                    </tr>
+                    <tr>
+
+                        <td><input type="number" min="18" max="60" name="username" placeholder=" 18 above " required></td>
+
+                    </tr>
+                </table>
+
+        </div>
+
+        <div id="gender">
+            <label>Gender</label>
+            <input type="radio" name="gender"> Male
+            <input type="radio" name="gender"> Female
+            <input type="radio" name="gender"> Other
+        </div>
+
+        <input type="submit">
+        </form>
+    </section>
+
+</body>
+
+</html>

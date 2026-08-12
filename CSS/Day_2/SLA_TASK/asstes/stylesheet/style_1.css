@@ -1,0 +1,29 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: lightgray;
+    text-align: center;
+}
+
+h1 {
+    color: darkblue;
+    margin: 20px;
+}
+.movie {
+    width: 300px;
+    background-color: teal;
+    color: white;
+    padding: 15px;
+    margin: 20px auto;
+    border-radius: 10px;
+}
+h2, p {
+    margin: 10px;
+}

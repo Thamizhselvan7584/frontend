@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html{
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: white;
+        }
+
+        h1 {
+            text-align: center;
+            margin: 30px;
+            color: blue;
+            font-size: 35px;
+        }
+
+        .services {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .card {
+            background-color: #f2f2f2;
+            width: 16%;
+            padding: 25px 15px;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px gray;
+        }
+
+        .card h2 {
+            font-size: 20px;
+            margin-bottom: 15px;
+        }
+
+        .card p {
+            font-size: 15px;
+        }
+
+        /* Mobile */
+        @media (max-width: 576px) {
+
+            body {
+                background-color: lightblue;
+            }
+
+            h1 {
+                color: red;
+                font-size: 25px;
+            }
+
+            .services {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .card {
+                width: 90%;
+            }
+
+            .card h2 {
+                font-size: 18px;
+            }
+
+            .card p {
+                font-size: 13px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Our Services</h1>
+
+    <div class="services">
+
+        <div class="card">
+            <h2>Web Development</h2>
+            <p>We create modern and responsive websites.</p>
+        </div>
+
+        <div class="card">
+            <h2>App Development</h2>
+            <p>We develop mobile applications.</p>
+        </div>
+
+        <div class="card">
+            <h2>UI/UX Design</h2>
+            <p>We design attractive and user-friendly interfaces.</p>
+        </div>
+
+        <div class="card">
+            <h2>AI Solutions</h2>
+            <p>We provide intelligent AI-based solutions.</p>
+        </div>
+
+        <div class="card">
+            <h2>Cloud Services</h2>
+            <p>We provide reliable cloud computing services.</p>
+        </div>
+
+        <div class="card">
+            <h2>Digital Marketing</h2>
+            <p>We help businesses grow through digital marketing.</p>
+        </div>
+
+    </div>
+
+</body>
+</html>

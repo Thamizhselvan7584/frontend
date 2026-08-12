@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+</head>
+<body>
+    <h2>Registration Form</h2>
+    <form>
+        <label for="Enter First Name">Enter First Name:</label>
+        <input type="text" name="Enter Name" placeholder="Enter First Name" required><br/><br/>
+        <label for="Enter last Name" >Enter Last Name:</label>
+        <input type="text" name="Enter Last Name" placeholder="Enter Last Name" required><br/><br/>
+        <label for="Enter Email">Enter Email:</label>
+        <input type="email" name="Enter email" placeholder="Enter Email" required><br/><br/>
+        <label for="password">Password:</label>
+        <input type="password" name="Enter Password" placeholder="Enter password" required><br/><br/>
+        <label for="Enter Mobile Number">Enter Mobile Number:</label>
+        <input type="tel" name="Mobile Number" minlength="10" maxlength="10" placeholder="Enter 10-digit Mobile Number" required><br/><br/>
+        <label for="Gender">Enter Gender:</label>
+        <input type="radio" name="Gender" value="Male">
+        <label for="Male">Male</label>
+         <input type="radio" name="Gender" value="Female">
+        <label for="Male">Female</label>
+         <input type="radio" name="Gender" value="Other">
+        <label for="Male">Other</label><br/><br/>
+        <label for="DOB">Date Of Birth:</label>
+        <input type="date" name="DOB" value="DOB"><br/><br/>
+        <label for="department">Department:</label>
+        <select name="department">
+            <option>--Select Department--</option>
+                <option>BCA</option>
+                <option>B.Sc Computer Science</option>
+                <option>B.Com</option>
+                <option>BBA</option>
+                <option>MCA</option>
+        </select><br/><br/>
+        <label>Course:</label>
+            <input type="checkbox" name="course" value="HTML"> HTML
+            <input type="checkbox" name="course" value="CSS"> CSS
+            <input type="checkbox" name="course" value="JavaScript"> JavaScript
+            <input type="checkbox" name="course" value="Python"> Python <br/>
+            <label for="Address">Enter Address</label><br/>
+            <textarea name="Address" id="" cols="20" rows="4" placeholder="Enter Address"></textarea>
+            <br/><br/>
+            <label for="file">add file</label>
+            <input type="file" name="Add file">
+            <br/><br/>
+            <input type="submit" value="Login">
+            <input type="reset" value="Clear">
+
+
+    </form>
+</body>
+</html>

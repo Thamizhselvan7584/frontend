@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Company Team</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+        }
+
+        h1 {
+            text-align: center;
+            margin: 30px;
+            color: #333;
+        }
+
+        .team {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .card {
+            width: 30%;
+            background-color: white;
+            padding: 20px;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px gray;
+        }
+
+        .card img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .card h2 {
+            margin: 15px 0 10px;
+        }
+
+        .card p {
+            margin: 8px;
+            color: #555;
+        }
+
+        /* Tablet */
+        @media (max-width: 768px) {
+            .card {
+                width: 45%;
+            }
+        }
+
+        /* Mobile */
+        @media (max-width: 576px) {
+            .card {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Our Team</h1>
+
+    <div class="team">
+
+        <div class="card">
+            <img src="assets/img/emp1.jpg" alt="Employee">
+            <h2>Arun Kumar</h2>
+            <p>Department: Development</p>
+            <p>Email: arun@gmail.com</p>
+        </div>
+
+        <div class="card">
+            <img src="assets/img/emp2.jpg" alt="Employee">
+            <h2>Priya</h2>
+            <p>Department: HR</p>
+            <p>Email: priya@gmail.com</p>
+        </div>
+
+        <div class="card">
+            <img src="assets/img/emp3.jpg" alt="Employee">
+            <h2>Rahul</h2>
+            <p>Department: Marketing</p>
+            <p>Email: rahul@gmail.com</p>
+        </div>
+
+        <div class="card">
+            <img src="assets/img/emp4.jpg" alt="Employee">
+            <h2>Divya</h2>
+            <p>Department: Finance</p>
+            <p>Email: divya@gmail.com</p>
+        </div>
+
+        <div class="card">
+            <img src="assets/img/emp4.jpg" alt="Employee">
+            <h2>Karthik</h2>
+            <p>Department: IT</p>
+            <p>Email: karthik@gmail.com</p>
+        </div>
+
+        <div class="card">
+            <img src="assets/img/em5.jpg" alt="Employee">
+            <h2>Meena</h2>
+            <p>Department: Design</p>
+            <p>Email: meena@gmail.com</p>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

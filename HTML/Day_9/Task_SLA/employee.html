@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> ABC Software Company</title>
+</head>
+
+<body>
+    <h2>ABC Software Company is hiring employees.</h2>
+    <form>
+
+        <label>Employee ID:</label>
+        <input type="text" name="empid" placeholder="Enter empid" required><br/><br/>
+        <label>Employee Name:</label>
+        <input type="text" name="empname" placeholder="Enter Name" required><br/><br/>
+        <label>Email:</label>
+        <input type="email" name="email" placeholder="Enter Email" required><br/><br/>
+        <label>Mobile:</label>
+        <input type="tel" name="mobile" minlength="10" maxlength="10" required placeholder="Enter Mobile Number"><br/><br/>
+        <label>Department:</label><br/>
+        <select name="department">
+            <option>Select Department</option>
+            <option>HR</option>
+            <option>Software Development</option>
+            <option>Testing</option>
+            <option>Marketing</option>
+            <option>Finance</option>
+        </select>
+        <br><br>
+        <label>Experience:</label><br/>
+        <input type="number" name="experience" placeholder="Eg:1..."> Years
+        <br><br>
+        <label>Salary:</label><br>
+        <input type="number" name="salary" placeholder="Eg:₹10,000"><br/><br/>
+        <label>Skills:</label><br>
+        <input type="checkbox" name="skills" value="Java"> Java
+        <input type="checkbox" name="skills" value="Python"> Python
+        <input type="checkbox" name="skills" value="HTML"> HTML
+        <input type="checkbox" name="skills" value="CSS"> CSS
+        <input type="checkbox" name="skills" value="JavaScript"> JavaScript
+        <br><br>
+        <label>Resume Upload:</label><br>
+        <input type="file" name="resume"><br><br>
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+
+    </form>
+
+    <br><br>
+    <center>
+        <h2>Employee Report</h2>
+    
+    <table border="1" cellpadding="10">
+
+        <thead>
+            <tr>
+                <th>Employee ID</th>
+                <th>Employee Name</th>
+                <th>Department</th>
+                <th>Experience</th>
+                <th>Salary</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>EMP101</td>
+                <td>Rahul</td>
+                <td>Software Development</td>
+                <td>3 Years</td>
+                <td>₹45,000</td>
+                <td>Selected</td>
+            </tr>
+
+            <tr>
+                <td>EMP102</td>
+                <td>Priya</td>
+                <td>Testing</td>
+                <td>2 Years</td>
+                <td>₹38,000</td>
+                <td>Selected</td>
+            </tr>
+
+            <tr>
+                <td>EMP103</td>
+                <td>Arun</td>
+                <td>HR</td>
+                <td>5 Years</td>
+                <td>₹60,000</td>
+                <td>Pending</td>
+            </tr>
+
+            <tr>
+                <td>EMP104</td>
+                <td>Divya</td>
+                <td>Marketing</td>
+                <td>4 Years</td>
+                <td>₹50,000</td>
+                <td>Selected</td>
+            </tr>
+        </tbody>
+
+    </table>
+    </center>
+
+</body>
+
+</html>

@@ -1,0 +1,110 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.one {
+    background-color: aqua;
+    display: block;
+    width: 500px;
+    height: 200px;
+    margin: 50px;
+}
+
+.two {
+    background-color: blueviolet;
+    display: block;
+    width: 500px;
+    height: 200px;
+    margin: 50px;
+
+}
+
+/* /* task 2  */
+
+.boxContainer {
+    background-color: rgb(197, 15, 46);
+    width: 1200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+
+
+}
+
+.box {
+    background-color: aliceblue;
+    width: 200px;
+    height: 200px;
+    margin: 20px;
+
+}
+
+.boxContainer-2 {
+    background-color: rgb(73, 157, 160);
+    width: 1200px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    justify-content: space-around;
+    margin: 30px;
+ 
+}
+
+.box-1 {
+    background-color: aliceblue;
+    width: 200px;
+    height: 200px;
+    margin: 20px;
+}
+
+.boxContainer-3 {
+    background-color: rgb(73, 157, 160);
+    width: 1200px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    justify-content: space-around;
+    margin: 30px;
+ 
+}
+
+.box-2 {
+    background-color: aliceblue;
+    width: 200px;
+    height: 200px;
+    margin: 20px;
+    display: none;
+}
+.box-20 {
+    background-color: aliceblue;
+    width: 200px;
+    height: 200px;
+    margin: 20px;
+    visibility: hidden;
+}
+
+.card_student{
+    background-color: aquamarine;
+    margin: 30px;
+    margin-top: 100px;
+    margin-left: 500px;
+    padding: 20px;
+    width: 200px;
+    height: 100px;
+    border: 1px solid black;
+    border-radius: 20px;
+    visibility: hidden;
+
+
+}

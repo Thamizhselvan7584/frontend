@@ -1,0 +1,40 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+}
+body{
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+html{
+    scroll-behavior: smooth;
+}
+section{
+    background: #000;
+    color: aliceblue;
+    border-radius: 200vh;
+    text-align: center;
+    height: 100px;
+}
+.one{
+    background: #8b0e0e;
+    color: rgb(16, 102, 179);
+    border-radius: 200vh;
+    text-align: center;
+    height: 100px;
+}
+#two{
+    background: #74c906;
+    color: aliceblue;
+    border-radius: 200vh;
+    text-align: center;
+    height: 100px;
+}
+ection{
+    background: #390ab9;
+    color: aliceblue;
+    border-radius: 200vh;
+    text-align: center;
+    height: 100px;
+}
+

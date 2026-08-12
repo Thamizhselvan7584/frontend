@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Product Store</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html{
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: white;
+        }
+
+        h1 {
+            text-align: center;
+            margin: 30px;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .card {
+            width: 22%;
+            background-color: white;
+            padding: 20px;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px gray;
+        }
+
+        .card img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .card h2 {
+            margin: 15px 0 10px;
+        }
+
+        .price {
+            font-size: 20px;
+            font-weight: bold;
+            color: green;
+            margin-bottom: 15px;
+        }
+
+        .card button {
+            padding: 10px 20px;
+            background-color: blue;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .card button:hover {
+            background-color: darkblue;
+        }
+
+        /* Tablet - 2 Cards Per Row */
+        @media (max-width: 768px) {
+
+            body {
+                background-color: lightblue;
+            }
+
+            .card {
+                width: 45%;
+            }
+        }
+
+        /* Mobile - 1 Card Per Row */
+        @media (max-width: 576px) {
+
+            body {
+                background-color: lightgreen;
+            }
+
+            .card {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Product Store</h1>
+
+    <div class="container">
+
+        <div class="card">
+            <img src="assets/img/laptop.jpg" alt="Laptop">
+            <h2>Laptop</h2>
+            <p class="price">₹50,000</p>
+            <button>Buy Now</button>
+        </div>
+
+        <div class="card">
+            <img src="assets/img/mobile.jpg" alt="Mobile">
+            <h2>Mobile Phone</h2>
+            <p class="price">₹25,000</p>
+            <button>Buy Now</button>
+        </div>
+
+        <div class="card">
+            <img src="assets/img/Headphones.jpg" alt="Headphones">
+            <h2>Headphones</h2>
+            <p class="price">₹2,000</p>
+            <button>Buy Now</button>
+        </div>
+
+        <div class="card">
+            <img src="assets/img/watch.jpg" alt="Smart Watch">
+            <h2>Smart Watch</h2>
+            <p class="price">₹3,500</p>
+            <button>Buy Now</button>
+        </div>
+
+        <div class="card">
+            <img src="assets/img/Keyboard.jpg" alt="Keyboard">
+            <h2>Keyboard</h2>
+            <p class="price">₹1,500</p>
+            <button>Buy Now</button>
+        </div>
+
+        <div class="card">
+            <img src="assets/img/Wireless Mouse.jpg" alt="Mouse">
+            <h2>Mouse</h2>
+            <p class="price">₹800</p>
+            <button>Buy Now</button>
+        </div>
+
+        <div class="card">
+            <img src="assets/img/Bluetooth Speaker.jpg" alt="Speaker">
+            <h2>Bluetooth Speaker</h2>
+            <p class="price">₹2,500</p>
+            <button>Buy Now</button>
+        </div>
+
+        <div class="card">
+            <img src="assets/img/camera.jpg" alt="Camera">
+            <h2>Digital Camera</h2>
+            <p class="price">₹35,000</p>
+            <button>Buy Now</button>
+        </div>
+
+    </div>
+
+</body>
+</html>

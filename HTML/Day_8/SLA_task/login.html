@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+</head>
+
+<body>
+    <center>
+    <h2>Student Login Form</h2>
+    </center>
+    <form>
+        <label for="Enter Youer Email">Enter Youer Email:</label>
+        <input type="email" name="Email" placeholder="Enter personal Email" required><br /><br />
+        <label for="password">Password:</label>
+        <input type="password" name="Password" placeholder="Enter Password"><br /><br />
+        <label for="Enter Mobile Number">Enter Mobile Number:</label>
+        <input type="tel" name="Enter Mobile Number" placeholder="Enter 10-digit Mobile Number" minlength="10" maxlength="10"><br /><br />
+        <label>User Type:</label>
+        <input type="radio" name="username" value="Student"> Student
+        <input type="radio" name="username" value="Faculty"> Faculty
+        <input type="radio" name="username" value="Admin"> Admin
+        <br/><br />
+        <label>Department:</label><br><br />
+        <select name="department">
+            <option>--Select Department--</option>
+            <option>BCA</option>
+            <option>B.Sc Computer Science</option>
+            <option>B.Com</option>
+            <option>MCA</option>
+        </select>
+        <br/><br/>
+        <input type="submit" value="Login">
+        <input type="reset" value="Clear">
+
+    </form>
+    
+</body>
+
+</html>

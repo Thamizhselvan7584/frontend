@@ -1,0 +1,38 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 30px;
+}
+
+h2 {
+    text-align: center;
+}
+
+ul {
+    width: 250px;
+    margin: auto;
+}
+
+li {
+    padding: 10px;
+    margin: 5px 0;
+    background-color: lightgray;
+    border: 1px solid gray;
+    list-style-type: none;
+}
+
+li:first-child {
+    background-color: lightgreen;
+    color: black;
+    font-weight: bold;
+}
+
+li:last-child {
+    background-color: lightcoral;
+    color: white;
+    font-weight: bold;
+}
