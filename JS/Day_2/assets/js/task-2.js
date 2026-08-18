@@ -1,4 +1,4 @@
-/*  var use in string 18 times*/
+/*  var use in string 10 times*/
 
 var city="chennai";
 var state='tamilnadu';
@@ -24,7 +24,7 @@ console.log(food);
 console.log(drink);
 
 
-/*  let use in Number 18 times */
+/*  let use in Number 10 times */
 let value1=100;
 let value2=200;
 let value3=10;
@@ -51,7 +51,7 @@ console.log(value11);
 
 
 
-/* true use in 10 times */
+/* true use in 5 times */
 
 const isStudent=true;
 const isEmployed=true;
@@ -67,7 +67,7 @@ console.log(isCitizen);
 
 
 
-/* false use in 10 times  */
+/* false use in 5 times  */
 
 const isOnline=false;
 const isAvailable=false;
@@ -82,3 +82,24 @@ console.log(isAvailable);
 console.log(isVerified);
 console.log(isCompleted);
 console.log(isLoggedIn);
+
+
+/* undefied use in 3 times  */
+
+var aaaa;
+var ssss;
+var qqqq;
+
+console.log(aaaa);
+console.log(ssss);
+console.log(qqqq);
+
+/* Null  use in 3 times  */
+
+var aaaa=null;
+var ssss=null;
+var qqqq=null;
+
+console.log(aaaa);
+console.log(ssss);
+console.log(qqqq);
