@@ -1,0 +1,238 @@
+var
+
+
+let userName = "Tamil";
+let age = 20;
+let course = "BCA";
+let college = "Alpha College";
+let city = "Chennai";
+let country = "India";
+let mobileNumber = "9876543210";
+let email = "tamil@gmail.com";
+let gender = "Male";
+let studentId = 101;
+let firstName = "Tamil";
+let lastName = "Selvan";
+let fullName = "Tamil Selvan";
+let address = "Chennai";
+let pincode = 600001;
+let mark = 85;
+let totalMarks = 450;
+let percentage = 90;
+let grade = "A";
+let subject = "JavaScript";
+let salary = 25000;
+let company = "ABC Technologies";
+let department = "IT";
+let experience = 2;
+let employeeId = 1001;
+let jobRole = "Developer";
+let managerName = "Arun";
+let joiningYear = 2025;
+let workingHours = 8;
+let location = "Chennai";
+let productName = "Laptop";
+let price = 50000;
+let quantity = 2;
+let brand = "Dell";
+let category = "Electronics";
+let productId = 501;
+let discount = 10;
+let tax = 18;
+let totalPrice = 100000;
+let availability = true;
+let isStudent = true;
+let isLoggedIn = false;
+let count = 10;
+let total = 100;
+let average = 75.5;
+let message = "Welcome";
+let language = "JavaScript";
+let website = "Google";
+let color = "Blue";
+let hobby = "Coding";
+
+
+
+let
+
+
+
+let studentName = "Rahul";
+let studentAge = 21;
+let studentCourse = "Computer Science";
+let rollNumber = 25;
+let departmentName = "BCA";
+let semester = 4;
+let attendance = 85;
+let examResult = "Pass";
+let subjectName = "Java";
+let assignmentStatus = "Completed";
+let teacherName = "Kumar";
+let teacherAge = 35;
+let teacherSubject = "Python";
+let classroom = "Room 101";
+let collegeName = "ABC College";
+let admissionYear = 2024;
+let academicYear = "2024-2025";
+let sectionName = "A";
+let benchNumber = 12;
+let libraryCard = 4567;
+let bookName = "Java Programming";
+let bookAuthor = "James Gosling";
+let bookPrice = 650;
+let bookPages = 450;
+let bookQuantity = 5;
+let bookCategory = "Programming";
+let bookLanguage = "English";
+let bookEdition = "Third Edition";
+let bookAvailable = true;
+let borrowedBook = false;
+let laptopModel = "HP Pavilion";
+let laptopRam = "8GB";
+let laptopStorage = "512GB";
+let processorName = "Intel i5";
+let screenSize = 15.6;
+let batteryLevel = 80;
+let chargingStatus = true;
+let operatingSystem = "Windows 11";
+let keyboardType = "Wireless";
+let mouseAvailable = true;
+let gameName = "Cricket";
+let playerName = "Virat";
+let teamName = "India";
+let playerAge = 30;
+let jerseyNumber = 18;
+let matchScore = 120;
+let matchOvers = 20;
+let winningTeam = "India";
+let matchStatus = "Completed";
+let tournamentName = "World Cup";
+
+
+const
+
+
+
+const companyName = "Tech Solutions";
+const officeLocation = "Chennai";
+const employeeCode = 2001;
+const employeeEmail = "employee@gmail.com";
+const employeePhone = "9876543210";
+const designation = "Software Developer";
+const monthlyIncome = 35000;
+const joiningDate = "18-08-2026";
+const workExperience = 3;
+const teamSize = 10;
+const vehicleName = "Car";
+const vehicleModel = "Toyota";
+const vehicleNumber = "TN01AB1234";
+const vehicleColor = "White";
+const vehiclePrice = 800000;
+const fuelType = "Petrol";
+const engineCapacity = 1500;
+const mileage = 18;
+const numberOfSeats = 5;
+const insuranceValid = true;
+const foodName = "Pizza";
+const foodPrice = 250;
+const foodQuantity = 2;
+const foodSize = "Large";
+const restaurantName = "Food Corner";
+const orderNumber = 5001;
+const tableNumber = 10;
+const paymentMethod = "UPI";
+const orderStatus = "Confirmed";
+const deliveryTime = 30;
+const countryName = "India";
+const stateName = "Tamil Nadu";
+const districtName = "Chennai";
+const capitalCity = "Chennai";
+const population = 7000000;
+const postalCode = 600001;
+const areaName = "Ekkatuthangal";
+const timeZone = "IST";
+const currencyName = "Indian Rupee";
+const currencySymbol = "₹";
+const websiteName = "My Portfolio";
+const websiteTitle = "Student Portfolio";
+const pageName = "Home";
+const pageNumber = 1;
+const fontSize = 16;
+const maxUsers = 100;
+const minAge = 18;
+const maxAge = 60;
+const versionNumber = "1.0.0";
+const websiteActive = true;
+
+
+
+
+
+
+1. What is JavaScript?
+
+JavaScript is a programming language used to make web pages interactive and dynamic.
+
+
+2. What is a variable?
+
+A variable is a named storage location used to store data or values in a program. The value of a variable can be changed during program execution
+
+
+3. What is variable declaration?
+
+Variable declaration means creating a variable by specifying its name. In JavaScript, we use var, let, or const to declare a variable.
+
+
+
+4. What is initialization?
+
+Initialization is the process of giving an initial value to a variable when it is declared.
+
+
+
+5. What is an assignment operator?
+
+An assignment operator is used to assign or store a value in a variable.
+
+
+6. What are var, let and const?
+
+var, let, and const are keywords used to declare variables in JavaScript.
+
+* var is the older way of declaring variables.
+* let is used when the variable's value may change
+* const is used when a variable should not be reassigned.
+
+
+7. What is the difference between var, let and const?
+
+var → can be redeclared and changed.
+let → cannot be redeclared, but can be changed.
+const → cannot be redeclared or reassigned.
+
+
+8. What is ES6?
+
+ES6 stands for ECMAScript 2015. It is a major version of the JavaScript language that introduced many new features and improvements.
+
+
+
+9. What is a JavaScript Engine?
+
+A JavaScript Engine is a program that reads, interprets, and executes JavaScript code.
+It converts JavaScript code into instructions that the computer can understand and execute.
+
+Google Chrome	= V8
+Microsoft Edge	= V8
+Mozilla Firefox	= SpiderMonkey
+Safari	= JavaScriptCore
+Node.js	= V8
+
+
+
+10. What is V8?
+
+V8 is a JavaScript engine developed by Google. It is used to execute JavaScript code quickly and efficiently.
+
