@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let age = 25;
+        if (age >= 18) {
+            console.log("Eligibel");
+
+        } else {
+            console.log("Not  Eligibel");
+        }
+
+
+        let number = Number(prompt("Enter the number:"))
+        if (number % 2 === 0) {
+            console.log("even");
+        } else {
+            console.log("odd");
+        }
+
+
+        let mark = Number(prompt("Enter a mark:"))
+
+        if (mark >= 90 && mark <= 100) {
+            console.log("A+");
+        } else if (mark >= 75 && mark <= 89) {
+            console.log("A");
+        } else if (mark >= 50 && mark <= 74) {
+            console.log("B");
+        } else if (mark >= 35 && mark <= 49) {
+            console.log("c");
+        } else {
+            console.log("Fail");
+
+        }
+
+
+        let username = "admin"
+        let password = "1234";
+
+        if(username === "admin" && password === "1234"){
+            console.log("login");
+            
+        } else {
+            console.log("inviled");
+            
+        }
+
+
+        let day=5;
+        switch(day){
+            case 1:
+                console.log("monday");
+                break;
+            case 2:
+                console.log("Tuesday");
+                break;
+             case 3:
+                console.log("wednesday")
+                break;
+            case 4:
+                console.log("Thursday");
+                break;
+            case 5:
+                console.log(" Friday");
+                break;
+
+             default:
+                console.log("invalied Day")
+
+        }
+
+    </script>
+</body>
+
+</html>
