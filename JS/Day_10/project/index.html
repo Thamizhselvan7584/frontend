@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Learning Platform - Learn JavaScript Step by Step</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body class="dark-theme">
+
+    <!-- TOP NAVIGATION BAR -->
+    <header class="top-navbar">
+        <div class="nav-left">
+            <button id="sidebar-toggle" class="icon-btn" aria-label="Toggle Sidebar">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+            </button>
+            <div class="brand" onclick="navigateTo('home')">
+                <span class="brand-badge">JS</span>
+                <span class="brand-title">Learning Platform</span>
+            </div>
+        </div>
+
+        <!-- SEARCH BAR -->
+        <div class="nav-center">
+            <div class="search-box">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+                <input type="text" id="global-search-input" placeholder="Search topics (e.g. array, loop, destructuring, promise)..." autocomplete="off">
+                <button id="search-clear-btn" class="search-clear" style="display:none;">&times;</button>
+                <div id="search-results-dropdown" class="search-dropdown"></div>
+            </div>
+        </div>
+
+        <div class="nav-right">
+            <!-- Overall Progress Pill -->
+            <div class="nav-progress-pill" onclick="navigateTo('progress')">
+                <span class="pill-label">Progress:</span>
+                <span id="nav-overall-percent" class="pill-value">0%</span>
+                <div class="mini-progress-bar">
+                    <div id="nav-progress-bar-fill" class="mini-progress-fill" style="width: 0%;"></div>
+                </div>
+            </div>
+
+            <!-- Theme Toggle Button (Dark / Light) -->
+            <button id="theme-toggle-btn" class="theme-btn" title="Toggle Light/Dark Theme">
+                <span class="theme-icon" id="theme-icon">☀️</span>
+                <span class="theme-text" id="theme-text">Light Mode</span>
+            </button>
+        </div>
+    </header>
+
+    <!-- APP CONTAINER -->
+    <div class="app-layout">
+
+        <!-- SIDEBAR NAVIGATION -->
+        <aside id="sidebar" class="sidebar">
+            <nav class="sidebar-nav">
+                <div class="nav-section-title">MAIN MENU</div>
+                <button class="nav-item active" data-section="home" onclick="navigateTo('home')">
+                    <span class="nav-icon">🏠</span>
+                    <span class="nav-text">Home</span>
+                </button>
+                <button class="nav-item" data-section="lessons" onclick="navigateTo('lessons')">
+                    <span class="nav-icon">📖</span>
+                    <span class="nav-text">Lessons</span>
+                    <span class="badge" id="sidebar-lessons-badge">0/18</span>
+                </button>
+                <button class="nav-item" data-section="sandbox" onclick="navigateTo('sandbox')">
+                    <span class="nav-icon">💻</span>
+                    <span class="nav-text">Code Practice</span>
+                </button>
+                <button class="nav-item" data-section="practice" onclick="navigateTo('practice')">
+                    <span class="nav-icon">📝</span>
+                    <span class="nav-text">Practice Questions</span>
+                    <span class="badge" id="sidebar-practice-badge">0/10</span>
+                </button>
+                <button class="nav-item" data-section="logical" onclick="navigateTo('logical')">
+                    <span class="nav-icon">🧠</span>
+                    <span class="nav-text">Logical Questions & Answers</span>
+                    <span class="badge" id="sidebar-logical-badge">0/10</span>
+                </button>
+                <button class="nav-item" data-section="test" onclick="navigateTo('test')">
+                    <span class="nav-icon">🎯</span>
+                    <span class="nav-text">JavaScript Test</span>
+                    <span class="badge" id="sidebar-test-badge">15 Qs</span>
+                </button>
+                <button class="nav-item" data-section="progress" onclick="navigateTo('progress')">
+                    <span class="nav-icon">📊</span>
+                    <span class="nav-text">My Progress</span>
+                </button>
+            </nav>
+
+            <div class="sidebar-footer">
+                <div class="beginner-tip-box">
+                    <span class="tip-icon">💡</span>
+                    <div>
+                        <strong>Beginner Tip:</strong>
+                        <p id="daily-tip">Practice writing small code snippets every day to build muscle memory!</p>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- MAIN CONTENT AREA -->
+        <main class="main-content">
+
+            <!-- 1. HOME SECTION -->
+            <section id="section-home" class="content-section active">
+                <div class="hero-banner">
+                    <div class="hero-content">
+                        <span class="hero-tag">Beginner Friendly JavaScript</span>
+                        <h1 class="hero-title">JS Learning Platform</h1>
+                        <p class="hero-subtitle">"Learn JavaScript Step by Step"</p>
+                        <p class="hero-description">
+                            Learn JavaScript from basics to advanced concepts with examples, practice questions and coding exercises.
+                        </p>
+                        <div class="hero-actions">
+                            <button class="btn btn-primary btn-lg" onclick="navigateTo('lessons')">
+                                <span>🚀 Start Learning</span>
+                            </button>
+                            <button class="btn btn-outline btn-lg" onclick="navigateTo('sandbox')">
+                                <span>💻 Practice JavaScript</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="hero-code-preview">
+                        <div class="code-card-header">
+                            <span class="dot red"></span>
+                            <span class="dot yellow"></span>
+                            <span class="dot green"></span>
+                            <span class="filename">hello-world.js</span>
+                        </div>
+                        <pre class="code-preview-body"><code><span class="token-keyword">let</span> greeting = <span class="token-string">"Welcome to JavaScript!"</span>;
+<span class="token-keyword">let</span> beginnerFriendly = <span class="token-keyword">true</span>;
+
+<span class="token-function">console</span>.<span class="token-method">log</span>(greeting);
+<span class="token-function">console</span>.<span class="token-method">log</span>(<span class="token-string">"Ready to code?"</span>, beginnerFriendly);
+
+<span class="token-comment">// Output:</span>
+<span class="token-output">> Welcome to JavaScript!</span>
+<span class="token-output">> Ready to code? true</span></code></pre>
+                    </div>
+                </div>
+
+                <!-- LEARNING STATISTICS -->
+                <div class="stats-grid">
+                    <div class="stat-card" onclick="navigateTo('lessons')">
+                        <div class="stat-icon icon-blue">📚</div>
+                        <div class="stat-info">
+                            <h3 class="stat-number">18</h3>
+                            <p class="stat-label">Structured Lessons</p>
+                            <span class="stat-sub">From Basics to Modern ES6+</span>
+                        </div>
+                    </div>
+                    <div class="stat-card" onclick="navigateTo('practice')">
+                        <div class="stat-icon icon-green">📝</div>
+                        <div class="stat-info">
+                            <h3 class="stat-number">10</h3>
+                            <p class="stat-label">Practice Questions</p>
+                            <span class="stat-sub">With Live In-Browser Runner</span>
+                        </div>
+                    </div>
+                    <div class="stat-card" onclick="navigateTo('logical')">
+                        <div class="stat-icon icon-purple">🧠</div>
+                        <div class="stat-info">
+                            <h3 class="stat-number">10</h3>
+                            <p class="stat-label">Logical Questions & Answers</p>
+                            <span class="stat-sub">With Modern ES6+ Explanations</span>
+                        </div>
+                    </div>
+                    <div class="stat-card" onclick="navigateTo('test')">
+                        <div class="stat-icon icon-orange">🎯</div>
+                        <div class="stat-info">
+                            <h3 class="stat-number">15</h3>
+                            <p class="stat-label">Test Questions</p>
+                            <span class="stat-sub">Test Your JS Skills & Score</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FEATURE HIGHLIGHTS -->
+                <div class="features-section">
+                    <h2 class="section-title">Why Learn Here?</h2>
+                    <div class="features-grid">
+                        <div class="feature-card">
+                            <div class="feature-icon">✨</div>
+                            <h3>Simple English</h3>
+                            <p>Every concept is explained in clear, friendly English without unnecessary jargon.</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon">⚡</div>
+                            <h3>Run Code Directly</h3>
+                            <p>Test your code in the browser with one click. No complex setups or installations.</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon">📈</div>
+                            <h3>Track Your Progress</h3>
+                            <p>Every completed lesson, question, and quiz score is saved automatically to your device.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- 2. LESSONS SECTION -->
+            <section id="section-lessons" class="content-section">
+                <div class="section-header">
+                    <div>
+                        <h1 class="page-title">JavaScript Lessons</h1>
+                        <p class="page-subtitle">Learn JavaScript step-by-step from beginner basics to intermediate modern features.</p>
+                    </div>
+                    <div class="lesson-filter-controls">
+                        <span id="lesson-progress-count" class="pill-tag">0 / 18 Completed</span>
+                    </div>
+                </div>
+
+                <div class="lessons-layout">
+                    <div class="lessons-index-card">
+                        <h3 class="index-title">Course Curriculum</h3>
+                        <div class="lesson-index-list" id="lesson-index-buttons"></div>
+                    </div>
+
+                    <div class="lesson-content-area" id="active-lesson-container"></div>
+                </div>
+            </section>
+
+
+            <!-- 3. CODE PRACTICE SECTION -->
+            <section id="section-sandbox" class="content-section">
+                <div class="section-header">
+                    <div>
+                        <h1 class="page-title">Interactive Code Editor</h1>
+                        <p class="page-subtitle">Write, experiment, and run JavaScript code safely inside your browser.</p>
+                    </div>
+                    <div class="sandbox-presets">
+                        <label for="code-presets-select">Load Preset:</label>
+                        <select id="code-presets-select" onchange="loadCodePreset(this.value)">
+                            <option value="hello">Hello Name (Default)</option>
+                            <option value="sum">Sum of Two Numbers</option>
+                            <option value="loop">For Loop 1 to 5</option>
+                            <option value="array">Array Methods</option>
+                            <option value="object">Object Properties</option>
+                            <option value="arrow">Arrow Function</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="editor-grid">
+                    <div class="editor-pane">
+                        <div class="editor-toolbar">
+                            <div class="editor-tabs">
+                                <span class="tab active">main.js</span>
+                            </div>
+                            <div class="editor-buttons">
+                                <button class="btn btn-sm btn-outline" onclick="clearSandboxCode()">
+                                    <span>🗑️ Clear</span>
+                                </button>
+                                <button class="btn btn-sm btn-outline" onclick="resetSandboxCode()">
+                                    <span>🔄 Reset</span>
+                                </button>
+                                <button class="btn btn-sm btn-primary" onclick="runSandboxCode()">
+                                    <span>▶️ Run Code</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="code-input-wrapper">
+                            <textarea id="sandbox-code-input" class="code-textarea" spellcheck="false" placeholder="Write your JavaScript code here..."></textarea>
+                        </div>
+                    </div>
+
+                    <div class="output-pane">
+                        <div class="output-toolbar">
+                            <span class="output-title">Console Output</span>
+                            <button class="btn btn-xs btn-outline" onclick="clearSandboxOutput()">Clear Console</button>
+                        </div>
+                        <div id="sandbox-output-display" class="console-output">
+                            <div class="console-empty-msg">Click <strong>"▶️ Run Code"</strong> to see output here.</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- 4. PRACTICE QUESTIONS SECTION -->
+            <section id="section-practice" class="content-section">
+                <div class="section-header">
+                    <div>
+                        <h1 class="page-title">Practice Questions</h1>
+                        <p class="page-subtitle">Solve these hand-picked coding questions to strengthen your JavaScript programming fundamentals.</p>
+                    </div>
+                    <span id="practice-progress-count" class="pill-tag">0 / 10 Solved</span>
+                </div>
+
+                <div id="practice-questions-container" class="cards-list"></div>
+            </section>
+
+
+            <!-- 5. LOGICAL QUESTIONS & ANSWERS SECTION -->
+            <section id="section-logical" class="content-section">
+                <div class="section-header">
+                    <div>
+                        <h1 class="page-title">Logical Questions & Answers</h1>
+                        <p class="page-subtitle">10 comprehensive modern ES6+ logical questions with clear answers, code, outputs, and explanations.</p>
+                    </div>
+                    <span id="logical-progress-count" class="pill-tag">0 / 10 Solved</span>
+                </div>
+
+                <div id="logical-questions-container" class="cards-list"></div>
+            </section>
+
+
+            <!-- 6. BASIC TEST SECTION -->
+            <section id="section-test" class="content-section">
+                <div class="section-header">
+                    <div>
+                        <h1 class="page-title">JavaScript Test</h1>
+                        <p class="page-subtitle">Test your knowledge across core JavaScript concepts. 15 questions with instant scoring.</p>
+                    </div>
+                    <div class="test-header-actions">
+                        <button class="btn btn-outline btn-sm" onclick="resetTest()">🔄 Reset Test</button>
+                    </div>
+                </div>
+
+                <div id="test-wrapper">
+                    <form id="quiz-form" onsubmit="submitQuiz(event)">
+                        <div id="test-questions-list" class="test-list"></div>
+
+                        <div class="test-submit-bar">
+                            <button type="submit" class="btn btn-primary btn-lg" id="btn-submit-test">
+                                <span>📋 Submit Test & View Score</span>
+                            </button>
+                        </div>
+                    </form>
+
+                    <div id="test-result-card" class="test-result-card" style="display: none;">
+                        <div class="result-header">
+                            <div class="result-badge-icon" id="result-icon">🎉</div>
+                            <h2 class="result-title" id="result-title">Test Result</h2>
+                        </div>
+                        <div class="result-scores-grid">
+                            <div class="result-score-box">
+                                <span class="score-label">Your Score</span>
+                                <span class="score-val" id="result-score-text">0 / 15</span>
+                            </div>
+                            <div class="result-score-box">
+                                <span class="score-label">Percentage</span>
+                                <span class="score-val" id="result-percentage-text">0%</span>
+                            </div>
+                            <div class="result-score-box">
+                                <span class="score-label">Rating</span>
+                                <span class="score-val" id="result-rating-text">Keep Practicing!</span>
+                            </div>
+                        </div>
+
+                        <div class="result-details" id="result-details-breakdown"></div>
+
+                        <div class="result-actions">
+                            <button class="btn btn-primary" onclick="retakeTest()">🔄 Try Again</button>
+                            <button class="btn btn-outline" onclick="navigateTo('progress')">📊 View My Progress</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- 7. MY PROGRESS SECTION -->
+            <section id="section-progress" class="content-section">
+                <div class="section-header">
+                    <div>
+                        <h1 class="page-title">My Learning Progress</h1>
+                        <p class="page-subtitle">Track your completed lessons, solved practice questions, logical problems, and test scores.</p>
+                    </div>
+                    <button class="btn btn-danger btn-sm" onclick="resetAllPlatformProgress()">⚠️ Reset All Progress</button>
+                </div>
+
+                <div class="progress-dashboard-grid">
+                    <div class="progress-card">
+                        <div class="progress-card-top">
+                            <div class="p-icon">📖</div>
+                            <div>
+                                <h3>Lessons Completed</h3>
+                                <p><span id="prog-lessons-count">0</span> of 18 lessons</p>
+                            </div>
+                            <span class="p-percent" id="prog-lessons-percent">0%</span>
+                        </div>
+                        <div class="progress-bar-container">
+                            <div id="prog-lessons-bar" class="progress-bar-fill fill-blue" style="width: 0%;"></div>
+                        </div>
+                    </div>
+
+                    <div class="progress-card">
+                        <div class="progress-card-top">
+                            <div class="p-icon">📝</div>
+                            <div>
+                                <h3>Practice Questions</h3>
+                                <p><span id="prog-practice-count">0</span> of 10 solved</p>
+                            </div>
+                            <span class="p-percent" id="prog-practice-percent">0%</span>
+                        </div>
+                        <div class="progress-bar-container">
+                            <div id="prog-practice-bar" class="progress-bar-fill fill-green" style="width: 0%;"></div>
+                        </div>
+                    </div>
+
+                    <div class="progress-card">
+                        <div class="progress-card-top">
+                            <div class="p-icon">🧠</div>
+                            <div>
+                                <h3>Logical Questions</h3>
+                                <p><span id="prog-logical-count">0</span> of 10 solved</p>
+                            </div>
+                            <span class="p-percent" id="prog-logical-percent">0%</span>
+                        </div>
+                        <div class="progress-bar-container">
+                            <div id="prog-logical-bar" class="progress-bar-fill fill-purple" style="width: 0%;"></div>
+                        </div>
+                    </div>
+
+                    <div class="progress-card">
+                        <div class="progress-card-top">
+                            <div class="p-icon">🎯</div>
+                            <div>
+                                <h3>Best Test Score</h3>
+                                <p><span id="prog-test-score">Not taken yet</span></p>
+                            </div>
+                            <span class="p-percent" id="prog-test-percent">0%</span>
+                        </div>
+                        <div class="progress-bar-container">
+                            <div id="prog-test-bar" class="progress-bar-fill fill-orange" style="width: 0%;"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="achievements-card">
+                    <h3 class="card-title">🏆 Your Achievements</h3>
+                    <div class="badges-grid" id="achievements-badges-container"></div>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="app-footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <span class="brand-badge">JS</span>
+                <span class="brand-title">JS Learning Platform</span>
+                <p class="footer-tagline">"Learn JavaScript. Practice. Improve."</p>
+            </div>
+            <div class="footer-links">
+                <button class="footer-link-btn" onclick="navigateTo('home')">Home</button>
+                <button class="footer-link-btn" onclick="navigateTo('lessons')">Lessons</button>
+                <button class="footer-link-btn" onclick="navigateTo('sandbox')">Practice</button>
+                <button class="footer-link-btn" onclick="navigateTo('test')">Test</button>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 JS Learning Platform. Made for beginners to master JavaScript easily.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
