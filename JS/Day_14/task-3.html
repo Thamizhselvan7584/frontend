@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smooth Card Toggle</title>
+
+    <style>
+        .card {
+            width: 300px;
+            border: 1px solid black;
+            padding: 15px;
+            text-align: center;
+            align-items: center;
+            position: relative;
+            left: 35%;
+            top: 50px;
+        }
+
+        .card img {
+            width: 100%;
+        }
+
+        .details {
+            max-height: 0;
+            overflow: hidden;
+            opacity: 0;
+            transition: 0.5s;
+        }
+
+        .show {
+            max-height: 200px;
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="card">
+
+        <img src="assets/imges/images.jpg" alt="Card Image">
+
+        <h2>C. Joseph Vijay</h2>
+
+        <div id="details" class="details">
+            <p>
+               Joseph Vijay (born 22 June 1974) is an Indian politician and former actor who is currently serving as the ninth chief minister of Tamil Nadu since May 2026.
+            </p>
+        </div>
+
+        <button id="btn">Show Details</button>
+
+    </div>
+
+
+    <script>
+
+        let details = document.getElementById("details");
+        let btn = document.getElementById("btn");
+
+        btn.addEventListener("click", () => {
+
+            details.classList.toggle("show");
+
+        });
+
+    </script>
+
+</body>
+
+</html>

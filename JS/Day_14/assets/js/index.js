@@ -1,4 +1,4 @@
-const myButton = document.getElementById('myButton');
+/* const myButton = document.getElementById('myButton');
 const one = document.getElementById('one');
 
 
@@ -19,5 +19,24 @@ myButton.addEventListener('click', () => {
         myButton.textContent = 'show';
     }
 });
+ */
 
 
+const button = document.getElementById("toggleBtn");
+const box = document.getElementById("box");
+
+let isVisible = true;
+
+button.addEventListener("click", () => {
+
+    isVisible = !isVisible;
+
+    if (isVisible) {
+        box.style.display = "block";
+        button.textContent = "Hide";
+    } else {
+        box.style.display = "none";
+        button.textContent = "Show";
+    }
+
+});
