@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Global 2030 — Future & IT</title>
+<link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+<div id="site-nav"></div>
+<main>
+<section class="home-hero container">
+  <div class="home-copy reveal">
+    <div class="home-eyebrow"><i></i> Global Future & IT • 2030 Vision</div>
+    <div class="home-version">✦ Latest Updated Version • V19</div>
+    <h1 class="home-title">Understand tomorrow.<br><span class="gradient">Build it better.</span></h1>
+    <p class="home-subtitle">A simple, interactive journey into the technologies shaping 2030, the risks we face when digital systems fail, and the practical solutions that can make our future safer, smarter, and more resilient.</p>
+    <div class="home-actions">
+      <a class="btn" href="register.html">Start Exploring →</a>
+      <a class="btn alt" href="login.html">Sign In</a>
+    </div>
+    <div class="home-note"><span>⚡ <b>Interactive</b> learning</span><span>🔐 <b>Secure</b> user flow</span><span>🌍 <b>2030</b> focused</span></div>
+  </div>
+  <div class="home-visual reveal">
+    <div class="visual-label top"><span>Future Intelligence</span><span class="live-dot">Live concept</span></div>
+    <div class="future-core"><div class="core-ring one"></div><div class="core-ring two"></div><strong>2030</strong></div>
+    <div class="visual-label bottom"><span>AI • Robotics • Networks</span><span>Explore the future</span></div>
+  </div>
+</section>
+
+<section class="section">
+ <div class="container">
+  <div class="home-stats">
+   <div class="home-stat reveal"><div class="stat" id="uCount">0</div><div class="muted">Community users</div></div>
+   <div class="home-stat reveal"><div class="stat" id="rCount">0</div><div class="muted">Reviews</div></div>
+   <div class="home-stat reveal"><div class="stat" id="sCount">0</div><div class="muted">Suggestions</div></div>
+   <div class="home-stat reveal"><div class="stat" id="pCount">0</div><div class="muted">Predictions</div></div>
+  </div>
+ </div>
+</section>
+
+<section class="section">
+ <div class="container">
+  <div class="home-section-head">
+   <div><div class="eyebrow">Explore</div><h2>Three views of the future</h2></div>
+   <p>Learn what may change, understand what happens when technology fails, and discover ways to build a more resilient future.</p>
+  </div>
+  <div class="grid">
+   <a class="card home-topic reveal" href="pages/it-2030.html"><img src="assets/images/ai.svg" alt="Artificial intelligence and future technology"><div class="home-topic-content"><span class="badge">01 • TECHNOLOGY</span><h3>How Technology Will Change Our World by 2030</h3><p class="muted">AI, generative AI, agents, robotics, cloud, cybersecurity, quantum computing, IoT and the future developer.</p><span class="topic-link">Explore technology →</span></div></a>
+   <a class="card home-topic reveal" href="pages/no-it.html"><img src="assets/images/banking.svg" alt="Digital banking systems"><div class="home-topic-content"><span class="badge">02 • WHAT IF?</span><h3>What Would Happen If Technology Stopped Working?</h3><p class="muted">See how banking, healthcare, education, transport, communication and the economy depend on connected systems.</p><span class="topic-link">Run the thought experiment →</span></div></a>
+   <a class="card home-topic reveal" href="pages/future-world.html"><img src="assets/images/smart-city.svg" alt="Future smart city"><div class="home-topic-content"><span class="badge">03 • SOLUTIONS</span><h3>Solutions for a Better Technology Future</h3><p class="muted">Explore responsible AI, security by design, green computing, future skills, resilience and digital access.</p><span class="topic-link">Discover solutions →</span></div></a>
+  </div>
+ </div>
+</section>
+
+<section class="section">
+ <div class="container home-quote reveal"><div class="quote-mark">“</div><div><p>The goal is not to predict one perfect future. It is to understand possibilities, prepare for challenges, and make better decisions today.</p><small>GLOBAL 2030 • Learn. Experience. Solve. Predict.</small></div></div>
+ </div>
+</section>
+</main>
+
+<script src="js/app.js"></script>
+<script>document.addEventListener('DOMContentLoaded',()=>{uCount.textContent=Store.get('g2030_users',[]).length;rCount.textContent=Store.reviews().length;sCount.textContent=Store.suggestions().length;pCount.textContent=Store.predictions().length});</script>
+</body>
+</html>
