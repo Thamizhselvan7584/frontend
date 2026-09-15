@@ -46,16 +46,6 @@ function initSettings(){
  document.querySelectorAll('[data-theme]').forEach(b=>b.classList.toggle('selected',b.dataset.theme===s.theme));
  document.querySelectorAll('[data-font]').forEach(b=>b.classList.toggle('selected',b.dataset.font===s.font));
 }
-function setupBackToTop(){
- if(document.querySelector('.back-to-top')) return;
- const b=document.createElement('button');
- b.className='back-to-top'; b.type='button'; b.setAttribute('aria-label','Back to top'); b.title='Back to top';
- b.innerHTML='<span>↑</span>';
- document.body.appendChild(b);
- const update=()=>b.classList.toggle('show',window.scrollY>420);
- window.addEventListener('scroll',update,{passive:true}); update();
- b.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
-}
 function nav(){
  const b=base(), u=Store.session()?Store.user():null;
  const el=document.querySelector('#site-nav'); if(!el)return;
@@ -63,7 +53,7 @@ function nav(){
  const link=(href,label,key)=>`<a class="nav-link ${current===key?'active':''}" href="${href}">${label}</a>`;
  el.innerHTML=`<header class="nav">
    <div class="container nav-inner">
-     <a class="brand" href="${b}index.html" aria-label="Global 2030 Home"><span class="brand-mark">G</span><span>GLOBAL <b>2030</b></span></a>
+     <a class="brand" href="${b}index.html" aria-label="Global 2030 Home" title="GLOBAL 2030 — AI & Circuit Technology"><img class="brand-icon" src="${b}assets/images/ai.svg" alt="AI and Circuit Technology icon" title="AI & Circuit Technology"><span>GLOBAL <b>2030</b></span></a>
      <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="main-menu"><span></span><span></span><span></span></button>
      <div class="nav-menu" id="main-menu">
        <nav class="nav-links" aria-label="Main navigation">
@@ -91,16 +81,15 @@ function renderFooter(){
  if(!footer){ footer=document.createElement('footer'); footer.className='footer'; document.body.appendChild(footer); }
  footer.innerHTML=`<div class="container footer-inner">
    <div class="footer-brand">
-     <a class="footer-logo" href="${b}index.html"><span class="brand-mark">G</span><span>GLOBAL <b>2030</b></span></a>
-     <p>Explore how technology could shape our world by 2030 — and how we can build a safer, smarter and more resilient future.</p>
-     <span class="footer-version">LATEST UPDATE • V19</span>
+     <a class="footer-logo" href="${b}index.html" title="GLOBAL 2030 — AI & Circuit Technology"><img class="brand-icon" src="${b}assets/images/ai.svg" alt="AI and Circuit Technology icon" title="AI & Circuit Technology"><span>GLOBAL <b>2030</b></span></a>
+     <p>A student-built educational platform exploring technology, resilience and responsible innovation for the world of 2030.</p>
+     <span class="footer-version">LATEST UPDATE • V23</span>
    </div>
-   <div class="footer-col"><h4>Explore</h4><a href="${b}dashboard.html">Dashboard</a><a href="${b}pages/it-2030.html">Technology by 2030</a><a href="${b}pages/no-it.html">What If Technology Stops?</a><a href="${b}pages/future-world.html">Future Solutions</a><a href="${b}pages/predictions.html">Predictions</a></div>
-   <div class="footer-col"><h4>Account</h4><a href="${b}profile.html">Profile</a><a href="${b}settings.html">Settings</a><a href="${b}login.html">Login</a><a href="${b}register.html">Create Account</a><a href="${b}forgot-password.html">Reset Password</a></div>
-   <div class="footer-col footer-highlight"><h4>Future Focus</h4><span>🤖 Artificial Intelligence</span><span>🔐 Cybersecurity</span><span>🌱 Sustainable Technology</span><span>🏙️ Resilient Smart Cities</span><span>🎓 Future Skills</span></div>
+   <div class="footer-col"><h4>Explore</h4><a href="${b}dashboard.html">Dashboard</a><a href="${b}pages/it-2030.html">Technology by 2030</a><a href="${b}pages/no-it.html">What If Technology Stops?</a><a href="${b}pages/future-world.html">Better Future Solutions</a><a href="${b}pages/predictions.html">Prediction Lab</a></div>
+   <div class="footer-col"><h4>Platform</h4><a href="${b}pages/predictions.html">Community Predictions</a><a href="${b}pages/no-it.html#simulator">Interactive Simulator</a><a href="${b}profile.html">My Profile</a><a href="${b}settings.html">Settings</a><a href="${b}forgot-password.html">Reset Password</a></div>
+   <div class="footer-col footer-note"><h4>Project</h4><span>HTML5 • CSS3 • Vanilla JavaScript</span><span>LocalStorage educational demo</span><span>Designed for college competition</span><span>Learn • Experience • Solve • Predict</span></div>
  </div>
- <div class="container footer-bottom"><span>© 2026 GLOBAL 2030. Educational Competition Project.</span><span>Learn • Experience • Solve • Predict</span><button class="footer-top" type="button" aria-label="Back to top">↑ Top</button></div>`;
- footer.querySelector('.footer-top')?.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
+ <div class="container footer-bottom"><span>© 2026 GLOBAL 2030. Educational Competition Project.</span><span>Future starts with responsible choices.</span></div>`;
 }
 
 function logout(){
@@ -113,5 +102,21 @@ function requireLogin(){if(!Store.session())location.href=base()+'login.html'}
 function escapeHTML(s){return String(s??'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[m]))}
 document.addEventListener('DOMContentLoaded',()=>{initSettings();nav();renderFooter();setupBackToTop();document.querySelectorAll('.reveal').forEach(x=>observeReveal(x));});
 function observeReveal(el){const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('show');io.unobserve(e.target)}}),{threshold:.12});io.observe(el)}
+function setupBackToTop(){
+ let btn=document.querySelector('.back-to-top');
+ if(!btn){
+  btn=document.createElement('button');
+  btn.type='button';
+  btn.className='back-to-top';
+  btn.setAttribute('aria-label','Back to top');
+  btn.title='Back to top';
+  btn.innerHTML='↑';
+  document.body.appendChild(btn);
+ }
+ const sync=()=>btn.classList.toggle('show',window.scrollY>420);
+ window.addEventListener('scroll',sync,{passive:true});
+ btn.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
+ sync();
+}
 
 document.addEventListener('pointermove',e=>{document.body.style.setProperty('--mx',e.clientX+'px');document.body.style.setProperty('--my',e.clientY+'px')});

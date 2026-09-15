@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Prediction Lab — Global 2030</title>
+    <link rel="icon" type="image/x-icon" href="../assets/images/icon-1.jpg">
+    <link rel="stylesheet" href="../css/main.css"><noscript>
+        <meta http-equiv="refresh" content="0;url=../login.html">
+    </noscript>
+</head>
+
+<body>
+    <div id="site-nav"></div>
+    <main class="section prediction-page">
+        <div class="container">
+            <div class="eyebrow">Community Future Lab • Updated</div>
+            <h1>Global 2030 Prediction Lab</h1>
+            <p class="lead">Turn your ideas into structured future forecasts. Choose a topic, explain your reasoning,
+                estimate when it may happen, and share your confidence.</p>
+            <section class="prediction-intro grid three">
+                <div class="card"><strong>01</strong>
+                    <h3>Observe</h3>
+                    <p class="muted">Think about technology, society, business and environmental trends.</p>
+                </div>
+                <div class="card"><strong>02</strong>
+                    <h3>Explain</h3>
+                    <p class="muted">Give a clear reason instead of making a prediction without evidence.</p>
+                </div>
+                <div class="card"><strong>03</strong>
+                    <h3>Compare</h3>
+                    <p class="muted">Use community confidence and categories to compare different ideas.</p>
+                </div>
+            </section>
+            <div class="grid two">
+                <div class="card form-card">
+                    <div class="eyebrow">CREATE FORECAST</div>
+                    <h2>Your 2030 Prediction</h2>
+                    <form id="prediction-form"><label>Category<select id="category" required>
+                                <option value="AI">Artificial Intelligence</option>
+                                <option value="Jobs">Jobs & Skills</option>
+                                <option value="Cybersecurity">Cybersecurity</option>
+                                <option value="Healthcare">Healthcare</option>
+                                <option value="Education">Education</option>
+                                <option value="Smart Cities">Smart Cities</option>
+                                <option value="Environment">Environment</option>
+                                <option value="Robotics">Robotics</option>
+                                <option value="Energy">Energy</option>
+                            </select></label><label>Time horizon<select id="horizon" required>
+                                <option>By 2030</option>
+                                <option>Next 1–2 years</option>
+                                <option>Next 3–5 years</option>
+                                <option>After 2030</option>
+                            </select></label><label>Your prediction<textarea id="predictionText" required
+                                maxlength="500" placeholder="By 2030, I predict that..."></textarea><small
+                                class="muted"><span id="predictionChars">0</span>/500
+                                characters</small></label><label>Why do you think this will happen?<textarea
+                                id="reasonText" required maxlength="600"
+                                placeholder="Explain the trend, evidence or reasoning behind your prediction..."></textarea><small
+                                class="muted"><span id="reasonChars">0</span>/600
+                                characters</small></label><label>Expected impact<select id="impact" required>
+                                <option>Low</option>
+                                <option selected>Medium</option>
+                                <option>High</option>
+                                <option>Transformational</option>
+                            </select></label><label>Confidence: <output id="confOut">50</output>%<input id="confidence"
+                                type="range" min="0" max="100" value="50"></label>
+                        <div class="confidence-scale"><span>Uncertain</span><span>Possible</span><span>Very
+                                likely</span></div><button class="btn" type="submit">Publish Prediction →</button>
+                        <p id="predictionMsg" class="auth-msg"></p>
+                    </form>
+                </div>
+                <div class="card">
+                    <div class="eyebrow">COMMUNITY FORECASTS</div>
+                    <div class="prediction-head">
+                        <div>
+                            <h2>What people expect</h2>
+                            <p class="muted">Newest predictions appear first.</p>
+                        </div>
+                        <div class="prediction-count" id="predictionTotal">0</div>
+                    </div>
+                    <div id="predictionStats" class="prediction-stats"></div>
+                    <div id="wall" class="review-wall"></div>
+                </div>
+            </div>
+            <section class="section">
+                <div class="section-head">
+                    <div>
+                        <div class="eyebrow">PREDICTION GUIDE</div>
+                        <h2>What makes a strong prediction?</h2>
+                    </div>
+                </div>
+                <div class="grid three">
+                    <article class="card">
+                        <h3>Be specific</h3>
+                        <p>Say what will change, who will experience it and the approximate time horizon.</p>
+                    </article>
+                    <article class="card">
+                        <h3>Show your reasoning</h3>
+                        <p>Connect your idea to a visible trend, technology capability, social need or known challenge.
+                        </p>
+                    </article>
+                    <article class="card">
+                        <h3>Accept uncertainty</h3>
+                        <p>Confidence is not certainty. A useful forecast explains how strongly you believe it may
+                            happen.</p>
+                    </article>
+                </div>
+            </section>
+        </div>
+    </main>
+    <script src="../js/app.js"></script>
+    <script src="../js/predictions.js"></script>
+</body>
+
+</html>
