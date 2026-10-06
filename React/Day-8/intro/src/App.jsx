@@ -1,21 +1,21 @@
-import Navbar from "./assets/componet/Navbar"
+import Counter from "./Counter";
+import TextChange from "./TextChange";
+import HideShow from "./HideShow";
 
-
- const App = () => {
-
-  
+const App = () => {
   return (
-    <>
-    <div className="bg-amber-400 ">
-      <h1 className='text-3xl font-bold underline'>Hello world!</h1>
+    <div>
+      <Counter />
+
+      <hr />
+
+      <TextChange />
+
+      <hr />
+
+      <HideShow />
     </div>
+  );
+};
 
-
-
-
-    <Navbar />
-    </>
-  )
-}
-
-export default App
+export default App;
